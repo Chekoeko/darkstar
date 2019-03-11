@@ -961,19 +961,8 @@ bool CMobController::Engage(uint16 targid)
 
 bool CMobController::CanAggroTarget(CBattleEntity* PTarget)
 {
-    if (PMob->getMobMod(MOBMOD_ALWAYS_AGGRO) > 0)
-    {
-        return true;
-    }
-    
     // Don't aggro I'm neutral
     if (!PMob->m_Aggro || PMob->m_neutral || PMob->isDead())
-    {
-        return false;
-    }
-
-    // Don't aggro I'm special
-    if (PMob->getMobMod(MOBMOD_NO_AGGRO) > 0)
     {
         return false;
     }
@@ -987,6 +976,18 @@ bool CMobController::CanAggroTarget(CBattleEntity* PTarget)
     if (PTarget->isDead() || PTarget->isMounted())
     {
         return false;
+    }
+
+    // Don't aggro I'm special
+    if (PMob->getMobMod(MOBMOD_NO_AGGRO) > 0)
+    {
+        return false;
+    }
+
+    // Always aggro, I'm special too!
+    if (PMob->getMobMod(MOBMOD_ALWAYS_AGGRO) > 0 && CanDetectTarget(PTarget))
+    {
+        return true;
     }
 
     if (PMob->PMaster == nullptr && PMob->PAI->IsSpawned() && !PMob->PAI->IsEngaged() && CanDetectTarget(PTarget))
