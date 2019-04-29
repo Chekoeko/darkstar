@@ -4,8 +4,6 @@
 -- Seal trader
 -- !pos -55.077 0.000 11.302
 -----------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/quests");
 local ID = require("scripts/zones/Port_Jeuno/IDs");
 -----------------------------------
 

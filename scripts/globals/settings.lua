@@ -16,17 +16,17 @@
 require("scripts/globals/common");
 
 -- Enable Expansion (1= yes 0= no)
-ENABLE_COP     = 0;
-ENABLE_TOAU    = 0;
-ENABLE_WOTG    = 0;
-ENABLE_ACP     = 0;
-ENABLE_AMK     = 0;
-ENABLE_ASA     = 0;
-ENABLE_ABYSSEA = 0;
-ENABLE_SOA     = 0;
-ENABLE_ROV     = 0;
+ENABLE_COP     = 1;
+ENABLE_TOAU    = 1;
+ENABLE_WOTG    = 1;
+ENABLE_ACP     = 1;
+ENABLE_AMK     = 1;
+ENABLE_ASA     = 1;
+ENABLE_ABYSSEA = 1;
+ENABLE_SOA     = 1;
+ENABLE_ROV     = 1;
 
-ENABLE_VOIDWATCH = 0; -- Not an expansion, but has its own storyline.
+ENABLE_VOIDWATCH = 1; -- Not an expansion, but has its own storyline.
 
 -- FIELDS OF VALOR/Grounds of Valor settings
 ENABLE_FIELD_MANUALS  = 1; -- Enables Fields of Valor
@@ -42,21 +42,21 @@ RESTRICT_CONTENT = 0;
 
 -- CHARACTER CONFIG
 INITIAL_LEVEL_CAP = 50; -- The initial level cap for new players.  There seems to be a hardcap of 255.
-MAX_LEVEL = 75; -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
+MAX_LEVEL = 99; -- Level max of the server, lowers the attainable cap by disabling Limit Break quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 81; -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 84; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-START_GIL = 10; -- Amount of gil given to newly created characters.
-START_INVENTORY = 30; -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
-OPENING_CUTSCENE_ENABLE = 0; -- Set to 1 to enable opening cutscenes, 0 to disable.
+NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 119; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
+START_GIL = 1000; -- Amount of gil given to newly created characters.
+START_INVENTORY = 80; -- Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
+OPENING_CUTSCENE_ENABLE = 1; -- Set to 1 to enable opening cutscenes, 0 to disable.
 SUBJOB_QUEST_LEVEL = 18; -- Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
 ADVANCED_JOB_LEVEL = 30; -- Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
-ALL_MAPS = 0; -- Set to 1 to give starting characters all the maps.
-UNLOCK_OUTPOST_WARPS = 0; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
+ALL_MAPS = 1; -- Set to 1 to give starting characters all the maps.
+UNLOCK_OUTPOST_WARPS = 2; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE      = 1.000; -- Multiplies prices in NPC shops.
 GIL_RATE        = 1.000; -- Multiplies gil earned from quests.  Won't always display in game.
 BAYLD_RATE      = 1.000; -- Multiples bayld earned from quests.
-EXP_RATE        = 1.000; -- Multiplies exp earned from fov and quests.
+EXP_RATE        = 10.000; -- Multiplies exp earned from fov and quests.
 TABS_RATE       = 1.000; -- Multiplies tabs earned from fov.
 CURE_POWER      = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 ELEMENTAL_POWER = 1.000; -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
@@ -136,15 +136,15 @@ HALLOWEEN_2005 = 0; -- Set to 1 to Enable the 2005 version of Harvest Festival, 
 HALLOWEEN_YEAR_ROUND = 0; -- Set to 1 to have Harvest Festival initialize outside of normal times.
 
 -- MISC
-HOMEPOINT_HEAL = 0; --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
+HOMEPOINT_HEAL = 1; --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
 RIVERNE_PORTERS = 120; -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
 LANTERNS_STAY_LIT = 1200; -- time in seconds that lanterns in the Den of Rancor stay lit.
 ENABLE_COP_ZONE_CAP = 1; -- enable or disable lvl cap
 TIMEZONE_OFFSET = 9.0; -- Offset from UTC used to determine when "JP Midnight" is for the server.  Default is JST (+9.0).
-ALLOW_MULTIPLE_EXP_RINGS = 0; -- Set to 1 to remove ownership restrictions on the Chariot/Empress/Emperor Band trio.
+ALLOW_MULTIPLE_EXP_RINGS = 1; -- Set to 1 to remove ownership restrictions on the Chariot/Empress/Emperor Band trio.
 BYPASS_EXP_RING_ONE_PER_WEEK = 0; -- -- Set to 1 to bypass the limit of one ring per Conquest Tally Week.
 NUMBER_OF_DM_EARRINGS = 1; -- Number of earrings players can simultaneously own from Divine Might before scripts start blocking them (Default: 1)
-HOMEPOINT_TELEPORT = 0; -- Enables the homepoint teleport system
+HOMEPOINT_TELEPORT = 1; -- Enables the homepoint teleport system
 DIG_ABUNDANCE_BONUS = 0; -- Increase chance of digging up an item (450  = item digup chance +45)
 DIG_FATIGUE = 1; -- Set to 0 to disable Dig Fatigue
 DIG_GRANT_BURROW = 0; -- Set to 1 to grant burrow ability
